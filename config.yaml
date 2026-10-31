@@ -1,0 +1,54 @@
+# Whistle Assistant Configuration
+# Copy to ~/.config/whistle-assistant/config.yaml or set via environment variables
+
+# Wake words that activate the assistant
+wake_words:
+  - "hey assistant"
+  - "okay assistant"
+  - "whistle"
+  - "computer"
+
+# Audio settings
+audio:
+  sample_rate: 16000
+  chunk_duration: 1.0
+  silence_threshold: 0.01
+  silence_duration: 1.5
+  input_device: null  # null = default, or specify device index
+
+# Speech recognition settings
+asr:
+  language: null  # null = auto-detect, or "en", "de", "fr", "es", "it", "nl", "pl"
+  keywords: []  # Words to bias recognition (e.g., names, technical terms)
+
+# Tool settings
+tools:
+  # App name aliases for open_app tool
+  app_aliases:
+    browser: ["chrome", "edge", "firefox", "browser"]
+    terminal: ["cmd", "powershell", "terminal", "shell"]
+    editor: ["vscode", "code", "notepad"]
+    files: ["explorer", "finder", "files"]
+  
+  # Default search paths for search_files
+  search_paths:
+    - "~/Documents"
+    - "~/Desktop"
+    - "~/Downloads"
+    - "~/Projects"
+
+# Text-to-speech settings
+tts:
+  enabled: true
+  rate: 1.0  # Speech rate multiplier
+  voice: null  # null = system default
+
+# Reminder settings
+reminders:
+  persist: true  # Save reminders to disk
+  storage_path: "~/.local/share/whistle-assistant/reminders.json"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "~/.local/share/whistle-assistant/assistant.log"

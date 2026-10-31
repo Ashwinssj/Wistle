@@ -1,0 +1,17 @@
+# Whistle Assistant Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+cactus-needle[mic]>=3.2.1
+sounddevice>=0.4.6
+numpy>=1.24
+psutil>=5.9
+watchdog>=3.0
+plyer>=2.1
+pyyaml>=6.0
+
+# Optional: for mobile UI
+# kivy>=2.3
+
+# Optional: for Android build
+# buildozer>=1.5.0
